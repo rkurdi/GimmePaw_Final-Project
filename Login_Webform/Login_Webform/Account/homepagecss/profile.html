@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<!--<link href="jquery-mobile/jquery.mobile.theme-1.0.min.css" rel="stylesheet" type="text/css">
+<link href="jquery-mobile/jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css">
+<script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery-1.8.1.min.js"></script>
+<script src="jquery-mobile/mobile/latest/jquery.mobile.min.js"></script>
+-->
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.6.4.js'></script>
+
+  <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css">    
+      <script type='text/javascript' src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+  
+
+<style>
+
+</style>
+
+
+<script type="text/javascript">
+$("a[data-role=tab]").each(function () {
+    var anchor = $(this);
+    anchor.bind("click", function () {
+        $.mobile.changePage(anchor.attr("href"), {
+            transition: "none",
+            changeHash: false
+        });
+        return false;
+    });
+});
+
+$("div[data-role=page]").bind("pagebeforeshow", function (e, data) {
+    $.mobile.silentScroll(0);
+    $.mobile.changePage.defaults.transition = 'slide';
+});
+
+
+</script>
+</head>
+
+<body>
+<div id="page-1" data-role="page">
+    <div data-role="header">
+        <a href="#" data-icon="arrow-l" data-iconpos="left" data-rel="back" data-transition="slide" data-direction="reverse">Back</a>
+        <h1>Profile</h1>
+        <a href="index.html" data-icon="check" data-theme="b">Save</a>
+</div>        
+    <div data-role="header" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#page-1" data-role="tab" data-icon="grid" class="ui-btn-active">Dog Profile</a></li>
+                <li><a href="#page-2" data-role="tab" data-icon="grid">Dog Pictures</a></li>
+                <li><a href="#page-3" data-role="tab" data-icon="grid">Owner's Profile</a></li>
+            </ul>
+        </div>
+
+    </div>
+     <div data-role="content">
+        <div align="center">
+      <div data-role="fieldcontain">
+        <p>
+          <input type="text" name="textinput" id="textinput" value="" placeholder="Name" />
+        </p>
+        <div data-role="fieldcontain">
+          <p>
+            <input type="text" name="textinput2" id="textinput2" value="" placeholder="Breed"   />
+          </p>
+          <div data-role="fieldcontain">
+              <select name="Gender" id="selectmenu" data-native-menu="false">
+              <option data-placeholder="true">Gender</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>  
+              </select>
+          </div>
+          <div data-role="fieldcontain">
+            <input type="text" name="textinput6" id="Age" value="" placeholder="Age" />
+          </div>
+          <div data-role="fieldcontain">
+            <input type="text" name="textinput4" id="f_food" value="" placeholder="Favorite Foods" />
+          </div>
+          <div data-role="fieldcontain">
+            <input type="text" name="textinput3" id="f_parks" value="" placeholder="Favorite Parks" />
+          </div>
+          </p>
+        </div>
+        </p>
+      </div>
+    </div>
+    </div>
+</div>
+
+<div id="page-2" data-role="page">
+    <div data-role="header">
+        <a href="#" data-icon="arrow-l" data-iconpos="left" data-rel="back" data-transition="slide" data-direction="reverse">Back</a>
+        <h1>Profile</h1>
+        <a href="index.html" data-icon="check" data-theme="b">Save</a>
+</div>
+    <div data-role="header" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#page-1" data-role="tab" data-icon="grid">Dog Profile</a></li>
+                <li><a href="#page-2" data-role="tab" data-icon="grid" class="ui-btn-active">Dog Pictures</a></li>
+                <li><a href="#page-3" data-role="tab" data-icon="grid">Owner's Profile</a></li>
+            </ul>
+        </div>
+    </div>
+
+     <div data-role="content">
+ <input type="button" id="uploader" value="Upload">
+    </div>
+</div>
+
+<div id="page-3" data-role="page">
+    <div data-role="header">
+        <a href="#" data-icon="arrow-l" data-iconpos="left" data-rel="back" data-transition="slide" data-direction="reverse">Back</a>
+        <h1>Profile</h1>
+        <a href="index.html" data-icon="check" data-theme="b">Save</a>
+</div>
+    <div data-role="header" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#page-1" data-role="tab" data-icon="grid">Dog Profile</a></li>
+                <li><a href="#page-2" data-role="tab" data-icon="grid">Dog Pictures</a></li>
+                <li><a href="#page-3" data-role="tab" data-icon="grid" class="ui-btn-active">Owner's Profile</a></li>
+            </ul>
+        </div>
+    </div>
+
+  <div data-role="content">
+        <div align="center">
+      <div data-role="fieldcontain">
+        <p> 
+        <div class="ui-grid-a">
+          <div class="ui-block-a"><input type="text" name="textinput" id="textinput" value="" placeholder="First Name" />
+          </div>
+          <div class="ui-block-b"><input type="text" name="textinput" id="textinput" value="" placeholder="Last Name" />
+          </div>
+        </div>
+        
+        </p>
+        <div data-role="fieldcontain">
+          <p>
+            <input type="text" name="textinput2" id="age" value="" placeholder="Age"   />
+          </p>
+          <div data-role="fieldcontain">
+            <input type="text" name="textinput6" id="address" value="" placeholder="Address" />
+          </div>
+          <div data-role="fieldcontain">
+            <div class="ui-grid-b">
+              <div class="ui-block-a"><input type="text" name="textinput4" id="city" value="" placeholder="City..." /></div>
+              <div class="ui-block-b"><input type="text" name="textinput4" id="state" value="" placeholder="State" /></div>
+              <div class="ui-block-c"><input type="number" name="textinput4" id="zip" value="" placeholder="Zip Code" /></div>
+            </div>
+          
+          </div>
+          <div data-role="fieldcontain">
+            <input type="email" name="textinput3" id="email" value="" placeholder="email" />
+          </div>
+          </p>
+        </div>
+        </p>
+      </div>
+    </div>
+    </div>    
+
+</div>
+</body>
+
+</html>
